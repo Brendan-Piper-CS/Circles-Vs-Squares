@@ -1,9 +1,13 @@
-//Variables
-boolean MainScreen = false;
-boolean StartScreen = true;
-String [] Words = {"Hey", "buddy", "ol'pal", "friend"};
-int w = int(random(4));
 
+//Variables
+boolean anwser=false;
+boolean mainScreen = false;
+boolean startScreen = true;
+boolean endScreen = false;
+String [] words = {"hey", "buddy", "ol'pal", "friend"};
+int w = int(random(4));
+int points = 0;
+String input ="";
 
 void setup() {
   fullScreen();
@@ -11,45 +15,75 @@ void setup() {
   textSize(75);
 }
 
-void draw() { 
-  MainScreen();
-  
-  /*
+void draw() {
+
   //StartScreen
-  if (StartScreen == true){
-  StartScreen();
+  if (startScreen == true) {
+    startScreen();
   }
   //MainScreen
-  if (MainScreen == true) {
-   MainScreen(); 
+  if (mainScreen == true) {
+    mainScreen();
+    text(input, 100, 100);
   }
-  */
-  //EndScreen();
+  //EndScreen
+  if (endScreen == true) {
+    endScreen();
+  }
 
-  if (keyPressed) {
-    if (key == 'e') {
-  exit(); };
-};
-  
 }
 
 
+void keyPressed() {
+  if (mainScreen == true) {
+  input+=key;
+  println (input);
+  }
 
-void mousePressed(){  
+if (key==CODED) {
+    if (keyCode==LEFT) {
+      println ("left");
+    } // if
+    else {
+      // message
+      println ("unknown special key");
+    } // else
+  } // if
+  else
+  {
+    if (key==BACKSPACE) {
+      if (input.length()>0) {
+        input=input.substring(0, input.length()-1);
+      } // if
+    } // if
+    else if (key==RETURN || key==ENTER) {
+      println ("ENTER");
+      if (input.equals(words[w])) {
+        println("Hurra!");
+        anwser=true;
+        input="";
+      } // if
+      else {
+        anwser=false;
+      }
+    } // else if
+    else {
+      input+=key;
+    } // else
+    // output
+    println (input);
+  }
+
+
+}
+
+void mousePressed() {  
   //start button
- if(StartScreen == true) {
-  if(mouseX > displayWidth/4 && mouseY > displayHeight*3/4 && mouseX < displayWidth/2 && mouseY < displayHeight*7/8) {
-    MainScreen = true;
-    StartScreen = false;
-    background(255);
+  if (startScreen == true) {
+    if (mouseX > displayWidth/4 && mouseY > displayHeight*3/4 && mouseX < displayWidth/2 && mouseY < displayHeight*7/8) {
+      mainScreen = true;
+      startScreen = false;
+      background(255);
+    }
   }
-  
-  if(mouseX > displayWidth/2 && mouseY > displayHeight*3/4 && mouseX < displayWidth*3/4 && mouseY < displayHeight*7/8) {
-    exit(); 
- }
-   
-  }
-
-
-
 }

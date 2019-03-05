@@ -1,5 +1,6 @@
-void MainScreen(){
-  //Main Screen
+
+void mainScreen(){
+  //UI
   fill(0);
   noFill();
   rect(displayWidth/12, displayHeight/6, displayWidth/3, displayHeight/9);//Your Healthbar
@@ -7,5 +8,12 @@ void MainScreen(){
   rect(displayWidth/5, displayHeight*3/4, displayHeight/6, displayHeight/6);//Your Square
   ellipse(displayWidth*4/6, displayHeight*5/6, displayWidth/10, displayWidth/10);//Enemy Circle
   
-   text(Words[w], displayWidth/5, displayHeight*3/4);
+   text(words[w], displayWidth/5, displayHeight*3/4);
+   
+   //Points
+   text(points, displayWidth/2, displayHeight/2);
+   
+     if (input.equals(words[w])) {
+    points++;
+     }
 }
