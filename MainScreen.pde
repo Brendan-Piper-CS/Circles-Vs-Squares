@@ -13,7 +13,13 @@ void mainScreen(){
    //Points
    text(points, displayWidth/2, displayHeight/2);
    
-     if (input.equals(words[w])) {
+     if (anwser == true) {
     points++;
+      if (points > 1) {
+       endScreen = true;
+      }
+    anwser=false;
+    w = int(random(4));
+
      }
 }
