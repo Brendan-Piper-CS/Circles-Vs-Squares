@@ -10,8 +10,8 @@ void buttons() {
     }
     //exit button
    if (mousePressed && mouseX > displayWidth/2 && mouseY > displayHeight*3/4 && mouseX < displayWidth*3/4 && mouseY < displayHeight*7/8) {
-  exit();
-  }
+      exit();
+    }
  }
 
 }

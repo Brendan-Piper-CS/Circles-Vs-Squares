@@ -7,6 +7,8 @@ String [] words = {"hey", "buddy", "ol'pal", "friend"};
 int w = int(random(4));
 int points = 0;
 String input ="";
+int yourHealth;
+int enemyHealth;
 
 void setup() {
   fullScreen();
@@ -14,8 +16,7 @@ void setup() {
   textSize(75);
 }
 
-void draw() {
-
+void draw() {  
   //StartScreen
   if (startScreen == true) {
     startScreen();
