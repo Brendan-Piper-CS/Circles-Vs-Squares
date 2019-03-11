@@ -7,7 +7,7 @@ void endScreen(){
   text("Crangratulations", displayWidth/3, displayHeight/3);
   
   //rect(displayWidth/4, displayHeight*3/4, displayWidth/4, displayHeight/9);
-  text("You got --- right",displayWidth/3, displayHeight/2);
+  text("You got " + points + " words right!",displayWidth/3, displayHeight/2);
   
   rect(displayWidth/4, displayHeight*3/4, displayWidth/4, displayHeight/9);
   text("Restart",displayWidth/4, displayHeight*5/6);
