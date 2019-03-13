@@ -1,7 +1,7 @@
 void typingPrompts() {
 if (key==CODED) {
 
-  } // if
+  }
   else
   {
     if (key==BACKSPACE) {
@@ -16,11 +16,13 @@ if (key==CODED) {
       } 
       else {
         anwser=false;
+        wrong=true;
+           
       }
     } 
     else {
       input+=key;
-    } 
+      } 
 
   } 
 
