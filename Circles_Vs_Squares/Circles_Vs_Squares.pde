@@ -3,19 +3,20 @@ boolean anwser=false;
 boolean mainScreen = false;
 boolean startScreen = true;
 boolean endScreen = false;
-String [] words = {"hey", "buddy", "ol'pal", "friend", "Dictionary" };
-int w = int(random(4));//player words
-int w2 = int(random(4));//enemy words
-int points = 0;
+int numOfWords = 5;
+String [] words = {"hey", "buddy", "ol'pal", "friend", "Dictionary", "thiccboi" };
+int w = int(random(numOfWords));//your words
+int w2 = int(random(numOfWords));//enemy words
 String input = "";
 String input2 = "";
+int letter = 0;
+int points = 0;
 int yourHealth;
 int enemyHealth;
 boolean wrong = false;
 boolean yeet;
 
-int e = 0;
-char enemyWord = input2.charAt(e);
+String str = words[w2];
 
 void setup() {
   fullScreen();
@@ -33,7 +34,7 @@ void draw() {
     background(255);
     mainScreen();
     text(input, 100, 100);
-    text(input2, 200, 100);
+    text(input2, 300, 200);
   }
   //EndScreen
   if (endScreen == true) {

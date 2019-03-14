@@ -12,7 +12,7 @@ void healthbars() {
        endScreen = true;
       }
     anwser=false;
-    w = int(random(4));
+    w = int(random(numOfWords));
 
    }
    

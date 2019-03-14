@@ -20,7 +20,23 @@ healthbars();
    text(points, displayWidth/2, displayHeight/2);
    
    //Health
-   text(enemyHealth, 500, 100);
+   text(enemyHealth, 600, 100);
+   text(yourHealth, 500, 100);
+   
+   //circle attack
+   char enemyLetter = words[w2].charAt(letter);
+   input2 = input2 + enemyLetter;
+   letter++;
+     if (input2.equals(words[w2])) {
+   input2 = "";
+   yourHealth = yourHealth - words[w2].length()*2;
+   letter = 0;
+   w2 = int(random(numOfWords));
+     if (yourHealth <= 0){
+      endScreen = true; 
+     }
+   
+   }
    
      
 }
