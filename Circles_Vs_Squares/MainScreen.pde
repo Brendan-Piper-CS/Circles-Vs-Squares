@@ -1,7 +1,7 @@
 void mainScreen () {
 healthbars();
   
-  fill(0, 255, 0);
+  fill(colour);
   rect(displayWidth/12, displayHeight/6, yourHealth, displayHeight/9);//Your Healthbar
   rect(displayWidth*1.2/2, displayHeight/6, enemyHealth, displayHeight/9);//Enemy Healthbar
   
@@ -20,23 +20,26 @@ healthbars();
    text(points, displayWidth/2, displayHeight/2);
    
    //Health
-   text(enemyHealth, 600, 100);
+   text(enemyHealth, 700, 100);
    text(yourHealth, 500, 100);
    
    //circle attack
-   char enemyLetter = words[w2].charAt(letter);
-   input2 = input2 + enemyLetter;
-   letter++;
-     if (input2.equals(words[w2])) {
-   input2 = "";
-   yourHealth = yourHealth - words[w2].length()*2;
-   letter = 0;
-   w2 = int(random(numOfWords));
-     if (yourHealth <= 0){
-      endScreen = true; 
-     }
+   if(frameCount % 24 == 0) {
+      if (input2.equals(words[w2])) {  
+        input2 = "";
+        yourHealth = yourHealth - words[w2].length()*5;
+        letter = 0;      
+        w2 = int(random(numOfWords));
+      }
+     char enemyLetter = words[w2].charAt(letter);
+     input2 = input2 + enemyLetter;
+     letter++; 
+   } 
    
-   }
+   if (yourHealth <= 0){
+      endScreen = true; 
+    }
+   
+}
    
      
-}

@@ -3,7 +3,7 @@ boolean anwser=false;
 boolean mainScreen = false;
 boolean startScreen = true;
 boolean endScreen = false;
-int numOfWords = 5;
+int numOfWords = 6;
 String [] words = {"hey", "buddy", "ol'pal", "friend", "Dictionary", "thiccboi" };
 int w = int(random(numOfWords));//your words
 int w2 = int(random(numOfWords));//enemy words
@@ -15,8 +15,10 @@ int yourHealth;
 int enemyHealth;
 boolean wrong = false;
 boolean yeet;
-
-String str = words[w2];
+color green = #0FF005;
+color orange = #FC8C03;
+color red = #FC0303;
+int colour;
 
 void setup() {
   fullScreen();

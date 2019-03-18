@@ -8,6 +8,9 @@ void buttons() {
       points = 0;
       background(255);
       yeet = true;
+      input = "";
+      input2 = "";
+      letter = 0;
     }
     //exit button
    if (mousePressed && mouseX > displayWidth/2 && mouseY > displayHeight*3/4 && mouseX < displayWidth*3/4 && mouseY < displayHeight*7/8) {
