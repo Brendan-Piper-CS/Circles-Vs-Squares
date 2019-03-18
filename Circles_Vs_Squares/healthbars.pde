@@ -4,14 +4,16 @@ void healthbars() {
   enemyHealth = displayWidth/3;
   yeet = false;
   colour = green;
+  colour2 = green;
   }
 
+  //Your attack
   if (anwser == true) {
     points++;
     enemyHealth = enemyHealth - words[w].length()*12;
-    if (enemyHealth <= displayWidth/5) {
+    if (enemyHealth <= displayWidth/3/4) {
       colour = red;
-    } else if (enemyHealth <= displayWidth/2) {
+    } else if (enemyHealth <= displayWidth/3/2) {
       colour = orange;
     }
     if (enemyHealth <= 0) {
@@ -27,5 +29,27 @@ void healthbars() {
     wrong = false;
   
   }
+  
+   //Circle attack
+   if(frameCount % 24 == 0) {
+      if (input2.equals(words[w2])) {  
+        input2 = "";
+        yourHealth = yourHealth - words[w2].length()*12;
+        letter = 0;      
+        w2 = int(random(numOfWords));
+      }
+      if (yourHealth <= displayWidth/3/4) {
+        colour2 = red;
+    } else if (yourHealth <= displayWidth/3/2) {
+        colour2 = orange;
+    }
+     char enemyLetter = words[w2].charAt(letter);
+     input2 = input2 + enemyLetter;
+     letter++; 
+   } 
+   
+   if (yourHealth <= 0){
+      endScreen = true; 
+    }
 
 }

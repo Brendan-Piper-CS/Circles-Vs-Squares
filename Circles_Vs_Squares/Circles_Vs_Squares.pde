@@ -3,8 +3,8 @@ boolean anwser=false;
 boolean mainScreen = false;
 boolean startScreen = true;
 boolean endScreen = false;
-int numOfWords = 6;
-String [] words = {"hey", "buddy", "ol'pal", "friend", "Dictionary", "thiccboi" };
+int numOfWords = 7;
+String [] words = {"hey", "buddy", "ol'pal", "friend", "dictionary", "thiccboi", "neighbour" };
 int w = int(random(numOfWords));//your words
 int w2 = int(random(numOfWords));//enemy words
 String input = "";
@@ -19,6 +19,7 @@ color green = #0FF005;
 color orange = #FC8C03;
 color red = #FC0303;
 int colour;
+int colour2;
 
 void setup() {
   fullScreen();
@@ -35,8 +36,6 @@ void draw() {
   if (mainScreen == true) {
     background(255);
     mainScreen();
-    text(input, 100, 100);
-    text(input2, 300, 200);
   }
   //EndScreen
   if (endScreen == true) {
