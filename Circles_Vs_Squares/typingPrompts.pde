@@ -10,7 +10,7 @@ if (key==CODED) {
       } 
     } 
     else if (key==RETURN || key==ENTER) {
-      if (input.equals(words[w])) {
+      if (input.equals(words[w]) && endScreen != true) {
         anwser=true;
         input="";
       } 

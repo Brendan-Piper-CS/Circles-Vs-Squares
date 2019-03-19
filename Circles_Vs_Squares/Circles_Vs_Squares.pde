@@ -3,8 +3,9 @@ boolean anwser=false;
 boolean mainScreen = false;
 boolean startScreen = true;
 boolean endScreen = false;
-int numOfWords = 7;
-String [] words = {"hey", "buddy", "ol'pal", "friend", "dictionary", "thiccboi", "neighbour" };
+int numOfWords = 17;
+String [] words = {"hey", "buddy", "ol'pal", "friend", "dictionary", "thiccboi", "neighbour", "Shrek", "chungus", "yeet",
+"Matthew", "Second Matthew", "Second second Matthew", "Tall Matthew", "Asian Matthew", "Gay Matthew", "Hairy Matthew" };
 int w = int(random(numOfWords));//your words
 int w2 = int(random(numOfWords));//enemy words
 String input = "";
@@ -20,6 +21,7 @@ color orange = #FC8C03;
 color red = #FC0303;
 int colour;
 int colour2;
+int diff;
 
 void setup() {
   fullScreen();

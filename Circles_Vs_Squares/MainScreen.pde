@@ -1,5 +1,5 @@
 void mainScreen () {
-healthbars();
+  healthbars();
   
   fill(colour2);
   rect(displayWidth/12, displayHeight/6, yourHealth, displayHeight/9);//Your Healthbar

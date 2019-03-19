@@ -31,7 +31,7 @@ void healthbars() {
   }
   
    //Circle attack
-   if(frameCount % 24 == 0) {
+   if(frameCount % diff == 0) {
       if (input2.equals(words[w2])) {  
         input2 = "";
         yourHealth = yourHealth - words[w2].length()*12;

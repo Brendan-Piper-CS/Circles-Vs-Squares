@@ -11,6 +11,10 @@ void startScreen (){
   
   rect(displayWidth/2, displayHeight*3/4, displayWidth/4, displayHeight/9);
   text("Exit",displayWidth*3/5, displayHeight*5/6);
+  
+  //difficulty
+  rect(displayWidth/6, displayHeight/2, displayWidth/5, displayHeight/8);
+  //text("Easy");
 
 
 

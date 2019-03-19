@@ -11,6 +11,7 @@ void buttons() {
       input = "";
       input2 = "";
       letter = 0;
+      w = int(random(numOfWords));
     }
     //exit button
    if (mousePressed && mouseX > displayWidth/2 && mouseY > displayHeight*3/4 && mouseX < displayWidth*3/4 && mouseY < displayHeight*7/8) {
