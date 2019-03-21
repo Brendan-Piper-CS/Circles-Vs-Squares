@@ -22,6 +22,8 @@ color red = #FC0303;
 int colour;
 int colour2;
 int diff;
+boolean instructions;
+boolean options;
 
 void setup() {
   fullScreen();
@@ -36,12 +38,10 @@ void draw() {
   }
   //MainScreen
   if (mainScreen == true) {
-    background(255);
     mainScreen();
   }
   //EndScreen
   if (endScreen == true) {
-    background(255);
     endScreen();
   }
   

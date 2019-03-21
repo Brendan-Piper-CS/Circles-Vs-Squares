@@ -1,4 +1,5 @@
 void mainScreen () {
+  background(255);
   healthbars();
   
   fill(colour2);

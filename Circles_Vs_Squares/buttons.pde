@@ -17,6 +17,35 @@ void buttons() {
    if (mousePressed && mouseX > displayWidth/2 && mouseY > displayHeight*3/4 && mouseX < displayWidth*3/4 && mouseY < displayHeight*7/8) {
       exit();
     }
- }
+    
+    //Instructions
+    if (mouseX > displayWidth/4 && mouseY > displayHeight/2 && mouseX < displayWidth/2 && mouseY < displayHeight/2  + displayHeight/9) {
+      background(255);
+      instructions = true;
+      instructions();
+      
+    }
+    
+    //Options
+    if (mousePressed && mouseX > displayWidth/2 && mouseY > displayHeight/2 && mouseX < displayWidth*3/4 && mouseY < displayHeight/2 + displayHeight/9) {
+      background(255);
+      options = true;
+      options();
 
+    }
+    
+
+ }
+    //Back Button for instructions and options
+    if (instructions == true || options == true) {
+      rect(0, 0, displayWidth/5, displayHeight/9);
+      text("Back", displayWidth/20, displayHeight/13);
+      
+      if (mousePressed && mouseX < displayWidth/5 && mouseY < displayHeight/9) {
+        startScreen = true;
+        instructions = false; 
+        options = false;
+      }
+      
+    }
 }

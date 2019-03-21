@@ -1,5 +1,6 @@
 void endScreen(){
   //End Screen
+  background(255);
   fill(0);
   noFill();
   rect(displayWidth/4, displayHeight/4, displayWidth/2, displayHeight/9);
