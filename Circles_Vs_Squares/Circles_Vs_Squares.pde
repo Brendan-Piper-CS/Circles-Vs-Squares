@@ -44,7 +44,10 @@ void draw() {
   if (endScreen == true) {
     endScreen();
   }
-  
+  //options
+  if (options == true) {
+    options();
+  }
 }
 
 

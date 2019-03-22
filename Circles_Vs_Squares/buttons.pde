@@ -26,16 +26,16 @@ void buttons() {
       
     }
     
-    //Options
+    //Options ------------------------------------------------------
     if (mousePressed && mouseX > displayWidth/2 && mouseY > displayHeight/2 && mouseX < displayWidth*3/4 && mouseY < displayHeight/2 + displayHeight/9) {
+      startScreen = false;
       background(255);
       options = true;
-      options();
 
     }
     
 
- }
+}
     //Back Button for instructions and options
     if (instructions == true || options == true) {
       rect(0, 0, displayWidth/5, displayHeight/9);
